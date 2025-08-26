@@ -1,22 +1,16 @@
-/* check */
-
 body {
-  /* background-color: pink;    */
-
   font-family: "Plus Jakarta Sans", sans-serif !important;
-  /* font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal; */
 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-.container{flex:1}
+.container {
+  flex: 1;
+}
 
-/* NAVBAR----------------------------------------------------------- */
 .fa-compass {
-  color: #FF521B;
+  color: #ff521b;
   font-size: 2rem;
 }
 
@@ -29,7 +23,6 @@ body {
   background-color: white;
 }
 
-/* FOOTER----------------------------------------------------------- */
 footer {
   background-color: aliceblue;
 }
@@ -54,12 +47,10 @@ footer {
   justify-content: center;
 }
 
-/* STYLING INDEX--------------------------------------------------------- */
 .row a {
   text-decoration: none !important;
 }
 
-/* Cards------------------------------------------------------------------ */
 .listing-card {
   border: none !important;
   margin-bottom: 2rem;
@@ -79,9 +70,8 @@ footer {
   font-weight: 400;
 }
 
-/* card-effect */
 .card-img-overlay {
-  opacity: 0 ;
+  opacity: 0;
 }
 
 .card-img-overlay:hover {
@@ -89,39 +79,29 @@ footer {
   background-color: white;
 }
 
-/* NEW PAGE */
-.add-btn{
+.add-btn {
   background-color: red !important;
   border: none !important;
 }
 
-/* EDIT PAGE */
-.edit-btn{
+.edit-btn {
   background-color: red !important;
   border: none !important;
 }
 
-/* SHOW PAGE */
-.show-img{
+.show-img {
   height: 30vh !important;
-  
 }
 
-.show-card{
+.show-card {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-.btns{
+.btns {
   display: flex;
 }
 
-/* map---------------------------------------------------------------*/
-#map{
+#map {
   height: 400px;
   width: 80vh;
 }
-
-
-
-
-
