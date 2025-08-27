@@ -29,6 +29,7 @@ router.get("/new", isLoggedin, listingController.renderNewRoute);
 
 router
   .route("/:id")
+  .get(listingController.renderShowRoute)
   .put(
     isLoggedin,
     isOwner,
@@ -36,8 +37,8 @@ router
     validateListing,
     wrapAsync(listingController.updateRouter)
   )
-  .delete(isLoggedin, isOwner, listingController.destroyRoute)
-  .get(listingController.renderShowRoute);
+  .delete(isLoggedin, isOwner, listingController.destroyRoute);
+  
 
 router.get(
   "/:id/edit",
