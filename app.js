@@ -104,9 +104,14 @@ app.use("/", (req, res, next) => {
   });
 });
 
-app.use(async (err, req, res, next) => {
-  let { status = 500, message = "default message" } = err;
-  res.status(status).send(err);
+// app.use(async (err, req, res, next) => {
+//   let { status = 500, message = "default message" } = err;
+//   res.status(status).send(err);
+// });
+
+app.use((err, req, res, next) => {
+  console.error("💥 Error:", err);
+  res.status(500).send("Something broke: " + err.message);
 });
 
 app.listen("8080", () => {
