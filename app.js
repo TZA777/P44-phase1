@@ -98,11 +98,11 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
-app.use("/", (req, res, next) => {
-  res.status(404).render("error/error.ejs", {
-    err,
-  });
-});
+// app.use("/", (req, res, next) => {
+//   res.status(404).render("error/error.ejs", {
+//     err,
+//   });
+// });
 
 // app.use(async (err, req, res, next) => {
 //   let { status = 500, message = "default message" } = err;
