@@ -25,11 +25,11 @@ router
     wrapAsync(listingController.createRouter)
   );
 
-router.get("/new", isLoggedin, listingController.renderNewRoute);
+router.get("/new", isLoggedin, wrapAsync(listingController.renderNewRoute));
 
 router
   .route("/:id")
-  .get(listingController.renderShowRoute)
+  .get(wrapAsync(listingController.renderShowRoute))
   .put(
     isLoggedin,
     isOwner,
@@ -37,7 +37,7 @@ router
     validateListing,
     wrapAsync(listingController.updateRouter)
   )
-  .delete(isLoggedin, isOwner, listingController.destroyRoute);
+  .delete(isLoggedin, isOwner, listingController.wrapAsync(destroyRoute));
   
 
 router.get(

@@ -13,7 +13,7 @@ const reviewController = require("../controllers/reviews.js");
 
 router
   .route("/")
-  .get(reviewController.reviewRenderShow)
+  .get(wrapAsync(reviewController.reviewRenderShow))
   .post(isLoggedin, validateReview, wrapAsync(reviewController.createReview));
 
 router.delete(
