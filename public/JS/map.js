@@ -2,7 +2,7 @@ mapboxgl.accessToken = mapToken;
 
 const map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/mapbox/standard-satellite",
+  // style: "mapbox://styles/mapbox/standard-satellite",
   center: listing.geometry.coordinates,
   zoom: 12,
 });
@@ -17,3 +17,6 @@ const marker1 = new mapboxgl.Marker({ color: "red" })
     )
   )
   .addTo(map);
+
+
+console.log("check");
