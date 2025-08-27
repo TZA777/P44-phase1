@@ -94,6 +94,11 @@ app.get("/error", async (req, res, next) => {
   res.send("hi");
 });
 
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+  // OR res.render("home"); if you want a homepage
+});
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
