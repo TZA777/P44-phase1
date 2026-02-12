@@ -161,6 +161,6 @@ app.use(async (err, req, res, next) => {
 // });
 
 //starting server --------------------------------------------------------------------------------
-app.listen("8080", () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log("listening to the port 8080");
 });
