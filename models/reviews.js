@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// const User = require("./user");
-
 const reviewSchema = new Schema({
   comment: String,
   rating: {
@@ -16,7 +14,7 @@ const reviewSchema = new Schema({
   },
   author: {
     type: Schema.Types.ObjectId,
-    ref: "User", //as User is refered require User model
+    ref: "User",
   },
 });
 
