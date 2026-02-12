@@ -110,21 +110,11 @@ app.use("/", userRouter);
 //   });
 // });
 
-<<<<<<< HEAD
-//starting server --------------------------------------------------------------------------------
-app.listen(process.env.PORT || 8080, () => {
-=======
-// app.use(async (err, req, res, next) => {
-//   let { status = 500, message = "default message" } = err;
-//   res.status(status).send(err);
-// });
-
 app.use((err, req, res, next) => {
   console.error("💥 Error:", err);
   res.status(500).send("Something broke: " + err.message);
 });
 
-app.listen("8080", () => {
->>>>>>> 292598e92a50c148421bada2bb970adff43c899e
+app.listen(process.env.PORT || 8080, () => {
   console.log("listening to the port 8080");
 });
