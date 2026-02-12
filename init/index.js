@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const data = require('./data.js');                          //data
-const Listing = require('../models/listings.js');           //schema
+const Listing = require('../models/listings.js');           //model
 
 
 //establishing connection with database------------------------------------------------

@@ -10,8 +10,9 @@ module.exports.isLoggedin = (req,res, next)=>{
     //console.log(req.body);
 
     
-    if(!req.isAuthenticated()){
-        req.session.redirectUrl = req.originalUrl;        //saving req.originalUrl before logging in 
+    if(!req.isAuthenticated()){  //a passport method
+        req.session.redirectUrl = req.originalUrl;  //saving req.originalUrl (path user tried to access) before logging in--R: to redirect after login 
+        
         req.flash("error", "You must be logged in");
         return res.redirect("/login");
     }

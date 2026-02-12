@@ -28,7 +28,7 @@
    using Listing model update a document
    save the doc
 
-   step3: check in CMB
+   step3: check in CMd
    show dbs
    use database_name
    show collections

@@ -23,6 +23,7 @@ const session = require("express-session");
 const MongoStore = require('connect-mongo'); //COMPATIABLE SESSION STORE
 const flash = require("connect-flash");
 
+//passport set-up next to session, passport will internatlly make use of session 
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");

@@ -6,7 +6,7 @@ const mapToken = process.env.MAPBOX_TOKEN; //storing MAPBOX_TOKEN
 const geocodingClient = mbxGeocoding({ accessToken: mapToken }); //creating geocodingClient and providing access for the same
 
 module.exports.index = async (req, res) => {
-  // Listing.find({}).then((res)=>{           //check
+  // await Listing.find({}).then((res)=>{           //check
   //     console.log(res);
   // })
 
